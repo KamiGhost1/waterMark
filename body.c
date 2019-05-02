@@ -63,6 +63,18 @@ int testParam(int C, char **V){
             return 0;            
         }
     }
+    if (C == 1){
+        printf("WaterMark by Ghost\nto more info use -h\nEnjoy!\n");
+        exit(0);
+    }
+    if(C==2){
+        if(!strcmp(V[1], "-h")){
+            printf("Use command waterMark.exe i1 iamge1.bmp i2 image2.bmp\n");
+            printf("Result write in image1.bmp\n");
+            printf("Enjoy!\n");
+            exit(0);
+        }
+    }
     printf("incorrect command! example: prog.exe i1 image1.bmp i2 image2.bmp\n");
     exit(1);
 }
